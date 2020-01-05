@@ -6,11 +6,13 @@ var app = express();
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
+app.use(__dirname);
+
 // use res.render to load up an ejs view file
 
 // index page 
 app.get('/', function (req, res) {
-    res.render('pages/main');
+    res.render('pages/index');
 });
 
 // about page 
